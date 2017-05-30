@@ -6,4 +6,7 @@
     <string name="voice">Voice Volume Control</string>
     <string name="music">Music Volume Control</string>
     <string name="alarm">Alarm Volume Control</string>
+    <string name="silent">Silent</string>
+    <string name="ringon">RingOn</string>
+    <string name="vibrate">Vibrate</string>
 </resources>
