@@ -3,8 +3,10 @@ package com.sumir.silent;
 import android.media.AudioManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,6 +41,37 @@ public class MainActivity extends AppCompatActivity {
         Images.createListener(audioManager,vibrate,"vibrate",ring);
         Images.createListener(audioManager,silent,"silent",ring);
 
+
+/*
+        vibrate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+                ring.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_RING));
+                Toast.makeText(MainActivity.this,"Now in Vibrate Mode",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+        loud.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+                ring.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_RING));
+                Toast.makeText(MainActivity.this,"Now in Ringing Mode",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+        silent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
+                //ring.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_RING));
+                Toast.makeText(MainActivity.this,"Now in silent Mode",
+                        Toast.LENGTH_LONG).show();
+            }
+        });*/
         Bar.intiBar(audioManager,alarm,AudioManager.STREAM_ALARM);
         Bar.intiBar(audioManager,music,AudioManager.STREAM_MUSIC);
         Bar.intiBar(audioManager,ring,AudioManager.STREAM_RING);

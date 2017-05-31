@@ -21,17 +21,18 @@ public class Images {
                 switch (mode) {
                     case "normal":
                         audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+                        seekBar.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_RING));
                         break;
                     case "silent":
-                        audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
                         audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
-
                         break;
+
                     case "vibrate":
                         audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+                        seekBar.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_RING));
                         break;
                 }
-                seekBar.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_RING));
+
 
             }
         });
