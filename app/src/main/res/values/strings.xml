@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Volume Control</string>
+    <string name="app_name">Volume</string>
     <string name="selectMode">Select Ring Mode</string>
     <string name="selectLevel">Control Volume</string>
     <string name="ringer">Ring Volume Control</string>
-    <string name="voice">Voice Volume Control</string>
+    <string name="voice">Call Volume Control</string>
     <string name="music">Music Volume Control</string>
     <string name="alarm">Alarm Volume Control</string>
     <string name="silent">Silent</string>
